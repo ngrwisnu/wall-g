@@ -13,6 +13,10 @@ $(document).ready(() => {
 
     $(".info").css("padding-right", elWidth * 2);
   }
+
+  $("button.download").on("click", () => {
+    window.location.href = `public/photo/${selectedImage}.jpg`;
+  });
 });
 
 $(document).ready(() => {
@@ -27,6 +31,7 @@ $(document).ready(() => {
 });
 
 $(document).ready(() => {
+  const selectedCategory = $("#category");
   const label = $("#box span.category");
   const galleryTemplate = $(".gallery template").html();
   const container = $("#box .container");
@@ -50,8 +55,6 @@ $(document).ready(() => {
   }
 
   // * category handler
-  const selectedCategory = $("#category");
-
   selectedCategory.on("change", () => {
     currentCategory = selectedCategory.val();
 
