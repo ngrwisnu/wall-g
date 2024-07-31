@@ -1,0 +1,31 @@
+@media screen and (max-width: 768px) {
+  #box {
+    width: 100%;
+    margin: 0 1rem;
+
+    header {
+      display: flex;
+      justify-content: space-evenly;
+
+      .title {
+        display: none;
+      }
+    }
+
+    .info {
+      padding-right: 1rem !important;
+      gap: 1rem;
+    }
+  }
+
+  #lightbox {
+    .wrapper {
+      width: calc(100% - 2rem);
+      left: calc((100% - (100% - 2rem)) / 2);
+
+      .images {
+        width: 70%;
+      }
+    }
+  }
+}

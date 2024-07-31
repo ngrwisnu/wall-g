@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wallpaper Gallery</title>
+
+    <link rel="stylesheet" href="dist/main.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="container">
+      <div class="bg-image">
+        <img src="public/photo/forest-1.jpg" alt="" />
+      </div>
+      <div>
+        <div id="box">
+          <header>
+            <div class="logo">
+              <img src="/public/inline-logo.png" alt="" />
+            </div>
+            <div class="">
+              <div class="title">
+                <div>YOUR FAVORITE</div>
+                <div>DESKTOP WALLPAPER</div>
+              </div>
+            </div>
+            <div class="">
+              <div class="actions">
+                <a href="#">Sign up</a>
+                <a href="#">Free Trial</a>
+              </div>
+            </div>
+          </header>
+          <section class="content">
+            <div class="gallery">
+              <div>
+                <div class="item">
+                  <div class="bullet">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="dropdown">
+                    <select id="category">
+                      <option value="forest">Forest</option>
+                      <option value="waterfall">Waterfall</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="container">
+                  <template>
+                    <div class="item">
+                      <div class="bullet">
+                        <div class="circle"></div>
+                      </div>
+                      <div class="preview">
+                        <div class="overlay">
+                          <span>Preview</span> <i data-lucide="pointer"></i>
+                        </div>
+                        <img src="/public/photo/forest-1.jpg" alt="" />
+                      </div>
+                    </div>
+                  </template>
+                </div>
+              </div>
+            </div>
+            <div class="preview jumbotron">
+              <div class="wrapper">
+                <img src="/public/photo/forest-1.jpg" alt="" />
+                <div class="maximize-overlay">
+                  <i data-lucide="maximize"></i>
+                </div>
+              </div>
+            </div>
+            <div class="social">
+              <div>
+                <ul class="icons">
+                  <li><i data-lucide="instagram"></i></li>
+                  <li><i data-lucide="facebook"></i></li>
+                  <li><img src="/public/icon/x.png" alt="" /></li>
+                </ul>
+                <div>Find us on:</div>
+              </div>
+            </div>
+          </section>
+          <section class="info">
+            <div>
+              <svg
+                width="244"
+                height="244"
+                viewBox="0 0 244 244"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect width="244" height="244" fill="url(#pattern0_116_10)" />
+                <defs>
+                  <pattern
+                    id="pattern0_116_10"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlink:href="#image0_116_10"
+                      transform="scale(0.0078125)"
+                    />
+                  </pattern>
+                  <image
+                    id="image0_116_10"
+                    width="128"
+                    height="128"
+                    xlink:href="data:image/png;base64,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"
+                  />
+                </defs>
+              </svg>
+              <div>
+                <div>Satisfy Your Eyes</div>
+                <div>with <span class="category"></span></div>
+              </div>
+            </div>
+            <div>
+              <div>100K+ downloads</div>
+              <button class="download">
+                <i data-lucide="arrow-down-to-line"></i> Download
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div id="lightbox">
+      <div class="overlay"></div>
+      <div class="wrapper">
+        <div class="icon minimize"><i data-lucide="minimize"></i></div>
+        <img class="preview" src="public/photo/forest-1.jpg" alt="" />
+        <div>
+          <div class="images">
+            <template id="gallery">
+              <div class="image">
+                <img src="public/photo/forest-1.jpg" alt="" />
+              </div>
+            </template>
+          </div>
+        </div>
+        <div class="icon star">
+          <svg
+            width="244"
+            height="244"
+            viewBox="0 0 244 244"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <rect width="244" height="244" fill="url(#pattern0_116_10)" />
+            <defs>
+              <pattern
+                id="pattern0_116_10"
+                patternContentUnits="objectBoundingBox"
+                width="1"
+                height="1"
+              >
+                <use xlink:href="#image0_116_10" transform="scale(0.0078125)" />
+              </pattern>
+              <image
+                id="image0_116_10"
+                width="128"
+                height="128"
+                xlink:href="data:image/png;base64,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"
+              />
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
