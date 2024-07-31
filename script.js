@@ -1,3 +1,5 @@
+import "./main.scss";
+
 let currentCategory = "forest";
 let selectedImage = "forest-1";
 
@@ -15,7 +17,7 @@ $(document).ready(() => {
   }
 
   $("button.download").on("click", () => {
-    window.location.href = `public/photo/${selectedImage}.jpg`;
+    window.location.href = `/photo/${selectedImage}.jpg`;
   });
 });
 
@@ -146,10 +148,7 @@ $(document).ready(() => {
   }
 
   function updateLightboxImage(filename) {
-    $("#lightbox .wrapper img.preview").attr(
-      "src",
-      `/public/photo/${filename}.jpg`
-    );
+    $("#lightbox .wrapper img.preview").attr("src", `/photo/${filename}.jpg`);
   }
 
   function cloneTemplate(i) {
@@ -180,7 +179,7 @@ $(document).ready(() => {
 });
 
 function cloneElement(clone, cat, i) {
-  clone.find("img").attr("src", `/public/photo/${cat}-${i + 1}.jpg`);
+  clone.find("img").attr("src", `/photo/${cat}-${i + 1}.jpg`);
   clone.find("img").attr("data-filename", `${cat}-${i + 1}`);
 
   return clone;
@@ -189,12 +188,12 @@ function cloneElement(clone, cat, i) {
 function updateJumbotron(filename) {
   $("section.content .preview.jumbotron img").attr(
     "src",
-    `/public/photo/${filename}.jpg`
+    `/photo/${filename}.jpg`
   );
 }
 
 function updateBackgroundImage(filename) {
-  $("#container .bg-image img").attr("src", `/public/photo/${filename}.jpg`);
+  $("#container .bg-image img").attr("src", `/photo/${filename}.jpg`);
 }
 
 function getImageAttribute(clone, attribute) {
