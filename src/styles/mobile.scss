@@ -52,6 +52,10 @@
           .preview {
             width: 56px;
             height: 56px;
+
+            .overlay {
+              font-size: 0.75em;
+            }
           }
         }
       }

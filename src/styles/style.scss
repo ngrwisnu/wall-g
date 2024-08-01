@@ -138,6 +138,12 @@ body {
         display: flex;
         flex-direction: column;
         height: 60%;
+        position: relative;
+
+        > div.item {
+          position: relative;
+          z-index: 2;
+        }
 
         > .item:not(:last-child)::before {
           content: "";
@@ -406,7 +412,7 @@ body {
       > div {
         font-size: 0.875em;
         font-style: italic;
-        text-align: center;
+        text-align: end;
         padding-right: 8px;
 
         &:last-child {
