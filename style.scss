@@ -65,9 +65,11 @@ body {
     width: 100%;
     height: 80px;
     padding: 1rem;
-    display: grid;
-    grid-template-columns: 20% auto 30%;
-    align-items: center;
+    display: flex;
+
+    > div:nth-child(2) {
+      flex: 1 1 0%;
+    }
 
     .logo {
       display: flex;
@@ -226,7 +228,7 @@ body {
           height: 80px;
           aspect-ratio: 1;
           border: 2px solid white;
-          background-color: gray;
+          background-color: rgb(226, 226, 226);
           border-radius: 12px;
           margin-top: 1rem;
           margin-left: 8px;
@@ -339,14 +341,19 @@ body {
               cursor: pointer;
             }
 
+            a {
+              color: #000000;
+              height: $icon-size;
+
+              img {
+                width: calc($icon-size - ($icon-size - 16px));
+                height: calc($icon-size - ($icon-size - 16px));
+              }
+            }
+
             > i {
               width: $icon-size;
               height: $icon-size;
-            }
-
-            > img {
-              width: calc($icon-size - ($icon-size - 16px));
-              height: calc($icon-size - ($icon-size - 16px));
             }
           }
         }
