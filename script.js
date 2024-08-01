@@ -1,4 +1,4 @@
-import "./main.scss";
+import "./src/styles/main.scss";
 import "./src/stylingButton.js";
 import "./src/galleryController.js";
 import "./src/lightboxController.js";
