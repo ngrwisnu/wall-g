@@ -1,11 +1,10 @@
 import {
   currentCategory,
-  forestGallery,
   selectedImage,
   updateSelectedImage,
-  waterfallGallery,
 } from "./galleryController.js";
 import { clonedElementImage } from "./utils/clonedElementImage.js";
+import GalleryDetails from "./utils/galleryDetails.js";
 import { getImageAttribute } from "./utils/getImageAttribute.js";
 import { setLightboxGalleryPosition } from "./utils/setLightboxGalleryPosition.js";
 import { updateBackgroundImage } from "./utils/updateBackgroundImage.js";
@@ -28,19 +27,25 @@ $(document).ready(() => {
     updateLightboxImage(selectedImage);
 
     if (currentCategory === "forest") {
-      forestGallery.forEach((_, i) => {
+      GalleryDetails.forestGallery.forEach((_, i) => {
         createLightboxGalleryItem(i);
       });
 
-      setLightboxGalleryPosition(lightboxImages, forestGallery.length);
+      setLightboxGalleryPosition(
+        lightboxImages,
+        GalleryDetails.forestGallery.length
+      );
     }
 
     if (currentCategory === "waterfall") {
-      waterfallGallery.forEach((_, i) => {
+      GalleryDetails.waterfallGallery.forEach((_, i) => {
         createLightboxGalleryItem(i);
       });
 
-      setLightboxGalleryPosition(lightboxImages, waterfallGallery.length);
+      setLightboxGalleryPosition(
+        lightboxImages,
+        GalleryDetails.waterfallGallery.length
+      );
     }
   });
 
