@@ -1,5 +1,6 @@
 import Category from "./utils/categoryHandler.js";
 import { clonedElementImage } from "./utils/clonedElementImage.js";
+import { removeButtonOutline } from "./utils/downloadHandler.js";
 import GalleryDetails from "./utils/galleryDetails.js";
 import { getImageAttribute } from "./utils/getImageAttribute.js";
 import { setLabel } from "./utils/setLabel.js";
@@ -17,6 +18,8 @@ $(document).ready(() => {
   createGallery();
 
   selectedCategory.on("change", () => {
+    removeButtonOutline();
+
     const newValue = selectedCategory.val();
     Category.setCategory(newValue);
 
@@ -33,6 +36,8 @@ $(document).ready(() => {
     const cloned = clonedElementImage(newItem, currentCategory, i);
 
     cloned.on("click", () => {
+      removeButtonOutline();
+
       const filename = getImageAttribute(cloned, "data-filename");
 
       updateSelectedImage(filename);

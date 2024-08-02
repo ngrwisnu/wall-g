@@ -5,8 +5,6 @@ $(document).ready(() => {
   const yellowSurface = "#fff9d0";
   const downloadButton = $("button.download");
 
-  downloadButton.css("outline", "none");
-
   downloadButton.click(() => {
     downloadButton.css({
       outline: "2px solid " + yellowSurface,
