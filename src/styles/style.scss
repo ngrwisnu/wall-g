@@ -255,8 +255,8 @@ body {
             transition: opacity 200ms ease-in-out;
 
             svg {
-              width: 1.125em;
-              height: auto;
+              width: 1em;
+              height: 1em;
               margin-left: 4px;
             }
           }
@@ -533,7 +533,7 @@ body {
       justify-content: center;
       align-items: center;
       gap: 1rem;
-      padding: 4px 0;
+      padding: 4px;
       overflow-x: auto;
 
       .image {

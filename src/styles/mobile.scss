@@ -6,6 +6,10 @@
   }
 
   #box {
+    height: fit-content;
+    max-height: 98%;
+    padding-bottom: 1rem;
+
     .content {
       grid-template-columns: 100%;
       grid-template-rows: max-content auto max-content;
@@ -55,6 +59,10 @@
 
             .overlay {
               font-size: 0.75em;
+
+              span {
+                display: none;
+              }
             }
           }
         }
@@ -85,6 +93,27 @@
 
     .info {
       font-size: 0.875em;
+      flex-direction: column;
+
+      > div:first-child {
+        order: 2;
+
+        svg {
+          width: 3em;
+        }
+      }
+
+      > div:nth-child(2) {
+        order: 1;
+      }
+    }
+  }
+
+  #lightbox {
+    .wrapper {
+      .images {
+        justify-content: start !important;
+      }
     }
   }
 }
